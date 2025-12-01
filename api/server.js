@@ -15,7 +15,10 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin:'https://portfolio-red-ten-cebl03r3j8.vercel.app/'
+  origin: process.env.FRONTEND_URL || '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
+  credentials: true
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
