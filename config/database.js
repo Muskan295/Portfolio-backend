@@ -1,4 +1,4 @@
-mport mongoose from 'mongoose';
+import mongoose from 'mongoose';
 
 // Cache the connection for serverless environments
 let cachedConnection = null;
