@@ -19,7 +19,9 @@ if (MONGODB_URI) {
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin:'https://portfolio-red-ten-cebl03r3j8.vercel.app/'
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
